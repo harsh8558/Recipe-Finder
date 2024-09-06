@@ -1,0 +1,151 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(255, 255, 204);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  margin: 50px 50px;
+  padding: 1em;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  background-color:rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: rgb(50, 50, 50);
+}
+
+.detail-container {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 70%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 25px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+#btnsearch {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(76, 150, 76);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#btnsearch:hover {
+  background-color: green;
+}
+
+
+#loading {
+  position: absolute;
+  z-index: -30;
+  opacity: 100%;
+  font-size: 3rem;
+  color: rgb(32, 32, 32);
+  background-color: rgba(252, 252, 252, 0);
+}
+#quotes{
+  font-size: 0.9em;
+  cursor: default;
+  color: rgb(123, 24, 24);
+}
+
+#results {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+  background-color: rgb(250, 250, 210);
+}
+
+.recipe-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.recipe-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: rgb(50, 50, 50);
+}
+
+.recipe-card button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(76, 150, 76);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-card button:hover {
+  background-color: green;
+}
+
+.recipe-card .ingredients {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: rgb(80, 80, 80);
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  input {
+    width: 90%;
+  }
+
+  #btnsearch {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  #results {
+    flex-direction: column;
+    align-items: center;
+  }
+}
